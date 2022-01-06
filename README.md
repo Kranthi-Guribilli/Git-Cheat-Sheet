@@ -152,6 +152,39 @@
    ```
    git clean -f
    ```
-   
+
+## Rewriting History
+* **Replace the last commit** with a combination of the staged changes and the last commit combined:
+
+  ```
+  git commit --amend
+  ```
+
+* **Rebase the current branch** with the specified base (it can be a branch name, tag, reference to a HEAD, or a commit ID):
+
+  ```
+  git rebase [base]
+  ```
+* List **changes made to the HEAD** of the local repository:
   
+  ```
+  git reflog   
+  ```
+  
+  Remote Repositories
+Create a new connection to a remote repository (give it a name to serve as a shortcut to the URL):
+
+git remote add [name] [URL]
+
+Fetch a branch from a remote repository:
+
+git fetch [remote_repo] [branch]
+
+Fetch a repository and merge it with the local copy:
+
+git pull [remote_repo]
+
+Push a branch to a remote repository with all its commits and objects:
+
+git push [remote_repo] [branch]
    
