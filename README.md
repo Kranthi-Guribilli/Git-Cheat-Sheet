@@ -127,7 +127,31 @@
   ```
 
 ## Undoing Changes:
+* **Undo changes** in a file or directory and create a new commit with the git revert command:
 
-  
+  ```
+  git revert [file/directory]
+  ```
+* **Unstage a file** without overwriting changes:
+
+   ``` 
+   git reset [file]
+   ```
+* Unso any changes introduced **after the specified commit**:
+
+  ```
+  git reset [commit]
+  ```
+* Show untracked files which will be removed when you run git clean (do a dry run):
+
+  ```
+  git clean -n
+  ```
+* **Remove untracked files:**
+
+   ```
+   git clean -f
+   ```
+   
   
    
