@@ -93,5 +93,41 @@
   ```
   git checkout [branch]
   ```
+* **Delete a local branch**:
+
+  ```
+  git branch -d [branch]
+  ```
+* **Rename a branch** you are currently working in:  
+
+  ```
+  git branch -m [new_branch_name]
+  ```
+* Merge the specified branch with the current branch:
+
+  ```
+  git merge [branch]
+  ```
+  
+## Making Changes
+* **Stage changes** for the next commit:
+
+  ``` 
+  git add [file/directory]
+  ```
+* **Stage everything** in the directory for an initial commit:
+
+  ```
+  git add .
+  ```
+* **Commit staged snapshots** in the version history with a descriptive message included in the command:
+
+  ```
+  git commit -m "[descriptive_message]"
+  ```
+
+## Undoing Changes:
+
+  
   
    
