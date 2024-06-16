@@ -152,6 +152,58 @@
    ```
    git clean -f
    ```
+## Stash
+* Git stash is a command in git that allows developers to temporarily save changes they have made to their code.
+* The changes can be saved temporarily, and later, can be retrieved when needed. This is especially useful when the developer needs to switch to a different branch or work on a different feature but doesn't want to commit the changes to the repository.
+* Stashing is a convenient way to save changes that are not yet ready to be committed, but also not ready to be discarded.
+* This feature can be used to save the untracked files and work and come back to it later.
+* Can be used to save bothe staged and unstaged changes.
+* **Git stash commands**
+
+  ```
+  git stash
+  ```
+* By default, Git stash will save both staged and unstaged changes. If you want to save only staged changes, you can use the --keep-index option:
+    ```
+    git stash --keep-index
+    ```
+* The git stash save command is similar to the git stash command. The only difference is that it allows developers to add a message describing the changes made to the stash.
+    ```
+    git stash save "message"
+    ```
+* If you want to give the stash a name(stash label), you can use the -m option:
+    ```
+    git stash save -m "My stash name"
+    ```
+* Once you have stashed your changes, you can switch to a different branch or work on a different feature. When you're ready to retrieve your stashed changes, you can use the Git stash apply option:
+    ```
+    git stash apply
+    ```
+* This will retrieve the most recent stash commit in the current working directory. To apply a specific or selected stash, you can use the Git stash apply command followed by the stash reference:
+    ```
+    git stash apply stash@{1}
+    ```
+* If you have more than one stash listing, you can use the Git stash list command to view them simultaneously:
+    ```
+    git stash list
+    ```
+* If you want to completely remove a stash from the current working directory, you can use the Git stash drop command:
+    ```
+    git stash drop stash@{1}
+    ```
+* If you want to apply a stash and remove it from the git stash branch at the same time, you can use the Git stash pop command:
+    ```
+    git stash pop
+    ```
+* The git stash pop will apply the most recent stash and remove it from the stash list.
+    ```
+    git stash branch branch_name stash_id
+    ```
+* The git stash branch command is used to create a new branch from a stash entry. This command applies the stash entry to the new branch, allowing developers to continue working on the changes.
+    ```
+    git stash drop stash_id
+    ```
+* This command is used to remove a stash entry from the stash list. It permanently deletes the stash entry, and stash history and cannot be undone.
 
 ## Rewriting History
 * **Replace the last commit** with a combination of the staged changes and the last commit combined:
